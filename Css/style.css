@@ -1,0 +1,170 @@
+html{
+    overflow: scroll;
+}
+
+body{
+    font-family:  "Montserrat", "Roboto", sans-serif;
+    background-size: 1000px;
+    /*background: url("../Html/images/moon.jpg");*/
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding-bottom: 70%;
+    position:static;
+}
+img{
+    padding: 10px;
+    display: inline;
+}
+#main-header{
+    margin-top: 5%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    color: slategrey;
+    width: 100%;
+     font-style: italic;
+     letter-spacing: 0.3em;
+     text-decoration-style: double;
+     text-decoration-line: line-through;
+     text-transform: capitalize;
+}
+
+.wtop{
+    width: 100%;
+}
+
+nav{
+    background-color: blue;
+}
+.wbar .w-button {
+    position: fixed;
+    left: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 50%;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.w-right{
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    white-space: normal;
+    padding: 15px;
+    padding-left: 15%;
+}
+.wbar .w-right{
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    z-index: 1;
+}
+.row{
+    margin: 0 10%;
+    padding: 5% 0;
+}
+.row-footer{
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    display: block;
+    width: 100%;
+    padding: 3%;
+    margin-top: auto;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+}
+.col-footer .s1{
+    width: 100%;
+    text-align: center;
+}
+.e{
+    text-align: left;
+    
+}
+.col-footer{
+    box-sizing: border-box;
+    float: left;
+    width: 33.3%;
+}
+h1{
+    padding: 1% 15%;
+    border-style: solid rgb(205, 206, 202);
+}
+.container-fluid{
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 70%;
+    margin: auto;
+    flex: 1 1 auto;
+}
+.col-md-4{
+    text-align: center;
+    width: 33%;
+    padding: 25px;
+}
+.btn-group{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn-primary{
+    background-color: darkslategrey;
+    border-color: dimgray;
+}
+.blockqoute{
+    background-color: #ffffff;
+}
+.blockquote-reverse p{
+    text-decoration-style: double;
+    text-transform: uppercase;
+    font-style: italic;
+    padding-top: 25px;
+}
+input[type=text] {
+    padding-top: 5px;
+    border: 5px solid rgb(109, 109, 235);
+    width: auto;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+input[type=text]:focus {
+    width: 100%; /*width of searchbar grows when clicked/making a search*/
+  }
+.button{
+    background-color:  rgb(231, 250, 57);
+    border-radius: 15;
+    padding-bottom: 20px;
+}
+.button:hover{
+    background-color: rgba(231, 250, 57, 0.733);
+}
+#main-footer{
+    left: 0;
+    background-color: #333;
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    color: #fff;
+    position:relative;
+    bottom:0;
+}
+/*about page*/
+.blocks{
+    float: left;
+    width: 30%;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    box-sizing: border-box; /*make box size equal to border of content so the 3 cols fit in a single row*/
+}
+.blocks h3{
+    text-align: center;
+    color: black;
+}
