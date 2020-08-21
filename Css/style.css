@@ -9,7 +9,6 @@ body{
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    padding-bottom: 70%;
     position:static;
 }
 img{
@@ -53,7 +52,7 @@ nav{
     right: 0px;
     white-space: normal;
     padding: 15px;
-    padding-left: 15%;
+    padding-left: 25%;
 }
 .wbar .w-right{
     position: fixed;
@@ -66,7 +65,6 @@ nav{
     padding: 5% 0;
 }
 .row-footer{
-    bottom: 0;
     left: 0;
     background-color: #333;
     display: block;
@@ -95,6 +93,7 @@ h1{
     border-style: solid rgb(205, 206, 202);
 }
 .container-fluid{
+    min-height: 100vh;
     width: 90%;
     padding-top: 10px;
     padding-bottom: 70%;
@@ -107,9 +106,25 @@ h1{
     padding: 25px;
 }
 .btn-group{
-    margin: 0;
+    margin-left: 3%;
     padding: 0;
-    box-sizing: border-box;
+  /*  box-sizing: border-box;*/
+}
+.btn-group-justified>.btn, .btn-group-justified>.btn-group {
+    width: 33%;
+    float:none;
+    display: table-cell;
+}
+.btn-group-justified{
+    width: 100%;
+    display: inline-flex;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+.btn-group-justified .btn{
+    width:75%; /* era 75% */
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn-primary{
     background-color: darkslategrey;
@@ -142,7 +157,7 @@ input[type=text]:focus {
 .button:hover{
     background-color: rgba(231, 250, 57, 0.733);
 }
-#main-footer{
+footer{
     left: 0;
     background-color: #333;
     display: block;
@@ -150,19 +165,25 @@ input[type=text]:focus {
     margin-top: auto;
     text-align: center;
     color: #fff;
-    position:relative;
+    position:sticky;
     bottom:0;
 }
-/*about page*/
+#block-container{
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+}
 .blocks{
     float: left;
+    margin-left: auto; 
+    margin-right: auto;
     width: 30%;
     background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 15px;
     margin-top: 15px;
     text-align: center;
-    box-sizing: border-box; /*make box size equal to border of content so the 3 cols fit in a single row*/
+    box-sizing: border-box; /*make box size equal to border of content so the 3 cols fit in a single row */
 }
 .blocks h3{
     text-align: center;
