@@ -22,13 +22,11 @@ img{
     text-align: center;
     color: slategrey;
     width: 100%;
-     font-style: italic;
-     letter-spacing: 0.3em;
-     text-decoration-style: double;
-     text-decoration-line: line-through;
-     text-transform: capitalize;
+    text-transform: capitalize;
 }
-
+#main-header h1{
+    padding-top: 5%;
+}
 .wtop{
     width: 100%;
 }
@@ -90,7 +88,6 @@ nav{
 }
 h1{
     padding: 1% 15%;
-    border-style: solid rgb(205, 206, 202);
 }
 .container-fluid{
     min-height: 100vh;
@@ -130,6 +127,10 @@ h1{
     background-color: darkslategrey;
     border-color: dimgray;
 }
+.btn-group .dropdown-menu{
+    width: 100%;
+    text-align: center;
+}
 .blockqoute{
     background-color: #ffffff;
 }
@@ -139,14 +140,19 @@ h1{
     font-style: italic;
     padding-top: 25px;
 }
-input[type=text] {
+input[type=text]  {
+    color: black;
     padding-top: 5px;
     border: 5px solid rgb(109, 109, 235);
     width: auto;
+    
+  }
+input[type=text] #searchbar{
+    width: auto;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-  }
-input[type=text]:focus {
+}
+input[type=text]:focus #searchbar{
     width: 100%; /*width of searchbar grows when clicked/making a search*/
   }
 .button{
@@ -172,6 +178,7 @@ footer{
     height: fit-content;
     width: fit-content;
     align-items: center;
+    margin-left: 15%;
 }
 .blocks{
     float: left;
@@ -188,4 +195,24 @@ footer{
 .blocks h3{
     text-align: center;
     color: black;
+}
+#myCarousel{
+    padding: 5% 0;
+}
+.carousel-control.right{
+    right: 0;
+    margin-right: 10%;
+    background-repeat: repeat;
+    background-image: none;
+}
+.carousel-control.left{
+    left: 0;
+    margin-left: 10%;
+    background-repeat: repeat;
+    background-image: none;
+}
+.carousel-inner .item{
+    margin-left: 5%;
+    max-width: 100%;
+    height: auto;
 }
