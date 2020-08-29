@@ -2,54 +2,66 @@
 html{
     overflow: scroll;
 }
-
+@-ms-viewport{
+    width: device-width;
+}
 body{
     font-family:  "Montserrat", "Roboto", sans-serif;
-    background-size: 800px;
     /*background: url("../Html/images/moon.jpg");*/
     display: flex;
     flex-direction: column;
     font-size: 18px;
     position:static;
+    justify-content: center;
 }
-img{
+header#main-header img{
     padding: 10px;
-    display: inline;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #main-header{
     margin-top: 5%;
-    display: inline-flex;
+    width: 100%;
+    display: flex;
     position: relative;
-    justify-content: center;
+    align-self: center;
     text-align: center;
     color: slategrey;
-    width: 100%;
     text-transform: capitalize;
+    box-sizing: border-box;
 }
-#main-header h1{
-    padding-top: 5%;
+header#main-header h1{
+    padding: 5% 1%
 }
-@media screen and (max-width: 300px) {
+/* @media son jquery code para controlar el responsiveness 
+    (como los componentes del web page cambian
+    cuando se cambia el viewport/device width,
+    ej. como se vera en un telefono, como se vera en un ipad o laptop) */
+
+@media screen and (min-width: 300px) {
     #main-header {
-      float: none;
       text-align: left;
+      width: 85px;
     }
-   .img-responsive{
-        width:10%;
-        height: auto;
+    header#main-header img{
+        padding: 20px;
+        display: block;
+        margin: auto;
+        width:85px;
     }
-    #main-header h1{
+    header#main-header h1{
         margin-top: 25%;
-        font-size:18px;
+        font-size:inherit;
     }
+    
 }
 .wtop{
     width: 100%;
+    box-sizing: content-box;
 }
 
-nav{
-    background-color: blue;
-}
+
 .wbar .w-button {
     position: fixed;
     left: 10px;
@@ -70,18 +82,15 @@ nav{
     position: fixed;
     background-color: #fff;
 }
-@media screen and (max-width: 300px) {
-    .wbar a{
-      position: fixed;
-      float: none;
-      left: auto;
-      z-index: 2;
+@media screen and (min-width: 300px) {
+    
+    .wbar a.w-wide{
+        background-color: #ffffff;
+        float: right;
+        display: flex;
+        z-index: 2;
     }
-    .wbar .w-right {
-      position: fixed;
-      width: 100%;
-      z-index: 1;
-    }
+    
 }
 .row{
     margin: 0 10%;
@@ -111,16 +120,26 @@ nav{
     float: left;
     width: 33.3%;
 }
-h1{
-    padding: 1% 15%;
+@media screen and (max-width: 300px){
+    footer{
+        width: 100%;
+    }
+   footer .col-footer   {
+       float:none;
+        width: 20%;
+    }
+    input[type=text]{
+        width: 568px;
+    }
 }
+
 .container-fluid{
-    min-height: 100vh;
     width: 90%;
     padding-top: 10px;
     padding-bottom: 70%;
-    margin: auto;
-    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
 }
 .col-md-4{
     text-align: center;
@@ -128,9 +147,7 @@ h1{
     padding: 25px;
 }
 .btn-group{
-    margin-left: 3%;
     padding: 0;
-  /*  box-sizing: border-box;*/
 }
 .btn-group-justified>.btn, .btn-group-justified>.btn-group {
     width: 33%;
@@ -172,12 +189,12 @@ input[type=text]  {
     width: auto;
     
   }
-input[type=text] #searchbar{
+input[type=text]#searchbar{
     width: auto;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
-input[type=text]:focus #searchbar{
+input[type=text]:focus#searchbar{
     width: 100%; /*width of searchbar grows when clicked/making a search*/
   }
 .button{
@@ -217,6 +234,17 @@ footer{
     text-align: center;
     box-sizing: border-box; /*make box size equal to border of content so the 3 cols fit in a single row */
 }
+@media screen and (max-width: 700px) {
+    .blocks{
+        justify-content: left;
+        width: 100%;
+    }
+    .blocks p{
+        font-size: 10px;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
+}
 .blocks h3{
     text-align: center;
     color: black;
@@ -232,7 +260,7 @@ footer{
 }
 .carousel-control.left{
     left: 0;
-    margin-left: 10%;
+    margin-left: 5%;
     background-repeat: repeat;
     background-image: none;
 }
