@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>MoonBuggy Shop</title> <!--Tab title-->
+        <link rel="stylesheet" href="../Css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+
+
+
+    <body>
+
+
+        <div class="wtop">
+             <!--Navbar that moves with page scroll-->
+            <div class="wbar" id="myNavbar">
+                <!--Left-sided navbar link to home-->
+              <a href="../Html/index.html" class="wbar-item w-button w-wide">MoonBuggy</a>
+              <!-- Right-sided navbar links -->
+              <div class="w-right ">
+                <a href="./about.html" class="wbar-item">ABOUT</a>
+                <a href="./team.html" class="wbar-item"><i class="fa fa-user"></i> TEAM</a>
+                <a href="./work.html" class="wbar-item"><i class="fa fa-th"></i> WORK</a>
+                <a href="./pricing.html" class="wbar-item"><i class="fa fa-usd"></i> DONATE</a>
+                <a href="./contact.html" class="wbar-item"><i class="fa fa-envelope"></i> CONTACT</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="container-fluid">
+          
+            <header id="main-header">
+                <img class="img-responsive" src="../Html/images/logo_uprm.png" alt="Logo Uni">
+                <img class="img-responsive" src="../Html/images/logo_moonbuggy.jfif" alt="Logo MoonBuggy">
+                <h1> MoonBuggy Shop </h1>
+                <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
+                <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
+            </header>
+
+          <!--Lower navbar with buttons-->
+          <div class="btn-group btn-group-justified">
+
+            <button type="button" class="btn btn-primary">
+                Home 
+                <a href="../Html/index.html"></a>
+            </button>
+
+              <div class="btn-group">
+
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Shop 
+                <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Shirts</a></li> <!--falta link to shirts page-->
+                <li><a href="#">Stickers</a></li><!--falta link to stickers page-->
+                </ul>
+              
+              </div>
+                <button type="button" class="btn btn-primary">
+                    Contact Us
+                </button>
+          </div>
+
+              <!--Search bar-->
+              <input id="searchbar" type="text" name="search" placeholder="Search.." >
+
+            <nav>
+                <!--Sample info boxes-->
+                <div class="row">
+                    <div class="col-md-4" style="background-color:lavender;">Mision</div>
+                    <div class="col-md-4" style="background-color:rgb(231, 250, 57);">Vision</div>
+                    <div class="col-md-4" style="background-color:lavender;">About Us</div>
+                </div>
+            </nav>
+
+            <blockquote class="blockquote-reverse">
+                <p>Knowlegde and experience is our formula for sucess.</p>
+                <p>UPRM PROJECT DESIGN TEAM</p>
+            </blockquote>
+
+        </div>
+      <br>
+    
+
+
+          <!-- Footer -->
+      <footer  class ="main-footer">
+
+
+        <div class="row-footer">
+
+          <div class="col-footer s1">
+            <h4>Contact</h4>
+            <p>Questions? Go ahead.</p>
+            <form action="/action_page.php" target="_blank">
+              <p><input type="text" placeholder="Name" name="Name" required></p>
+              <p><input type="text" placeholder="Email" name="Email" required></p>
+              <p><input type="text" placeholder="Subject" name="Subject" required></p>
+              <p><input type="text" placeholder="Message" name="Message" required></p>
+              <button type="submit" class="">Send</button>
+            </form>
+          </div>
+
+
+          <div class="col-footer s1">
+            <h4>About</h4>
+            <p><a href="../Html/about.html">About us</a></p>
+            <p><a href="#">Support</a></p><!--falta link to support page-->
+            <p><a href="#">Shipment</a></p><!--falta link to shipment page-->
+            <p><a href="#">Payment</a></p><!--falta link to payment page-->
+            <p><a href="#">Return</a></p><!--falta link to return page-->
+            <p><a href="#">Help</a></p><!--falta link to help page-->
+          </div>
+
+
+          <div class="col-footer s1 e">
+            <h4>Store</h4>
+              <p><i class="fa fa-fw fa-map-marker"></i> UPRM MoonBuggy</p>
+              <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+              <p><i class="fa fa-fw fa-envelope"></i><a>moonbuggy.design@gmail.com</a></p>
+              <br>
+              <h4>We accept</h4>
+              <p><i class="fa fa-fw fa-cc-amex"></i> PayPal</p>
+              <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+              <br>
+              <a href="https://www.facebook.com/UPRMMET/"><i class="fa fa-facebook-official "></i></a>
+              <a href="#"><i class="fa fa-instagram "></i></a>
+              <a href="#"><i class="fa fa-snapchat"></i></a>
+              <a href="#"><i class="fa fa-twitter "></i></a>
+          </div>
+
+
+        </div>
+
+      </footer>
+    </body>
+</html>
