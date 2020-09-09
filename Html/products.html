@@ -8,6 +8,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>MoonBuggy Shop</title> <!--Tab title-->
         <link rel="stylesheet" href="../Css/style.css">
+        <link rel="stylesheet" href="../Css/products.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -60,7 +61,7 @@
 
                 <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Shirts</a></li> <!--falta link to shirts page-->
-                <li><a href="../Html/products.html">Stickers</a></li><!--falta link to stickers page-->
+                <li><a href="#">Stickers</a></li><!--falta link to stickers page-->
                 </ul>
               
               </div>
@@ -68,26 +69,52 @@
                     Contact Us
                 </button>
           </div>
-
-              <!--Search bar-->
-              <!-- <input id="searchbar" type="text" name="search" placeholder="Search.." > -->
-
-            
-          </div>
-            <img class="image" src="../Html/Images/moon.jpg">
-            <div class="text">
-            <blockquote class="blockquote-reverse">
-                <p>Knowlegde and experience is our formula for sucess.</p>
-                <p id="footer">UPRM PROJECT DESIGN TEAM</p>
-            </blockquote>
-          </div>
-        
-        
-      <br>
-    
-
-
-          <!-- Footer -->
+        </div>
+          <div class="row product-list">
+            <div class="col-sm-3 product-description" data-name="Product #1" data-price="5">
+                <h3 class="product-name">Product #1</h3>
+                    <img class="img-responsive" src="../Html/Images/Moonman-playero.jpeg" alt="Moon Man Playero">
+                    <p class="product-price">&dollar; 5</p>
+                    <form class="add-to-cart" action="cart.html" method="post">
+                        <label for="qty-1">Quantity</label>
+                        <div>
+                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                            <input type="number" id="number" value="0" />
+                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                        </div>
+                        <p><input type="submit" value="Add to cart" class="btn" /></p>
+                    </form>
+            </div>
+            <div class="col-sm-3 product-description" data-name="Product #2" data-price="5">
+                <h3 class="product-name">Product #2</h3>
+                    <img class="img-responsive" src="../Html/Images/Up-Sticker.jpeg" alt="Moon Man Up">
+                    <p class="product-price">&dollar; 5</p>
+                    <form class="add-to-cart" action="cart.html" method="post">
+                        <label for="qty-1">Quantity</label>
+                        <div>
+                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                            <input type="number" id="number" value="0" />
+                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                        </div>
+                        <p><input type="submit" value="Add to cart" class="btn" /></p>
+                    </form>
+            </div>
+            <div class="col-sm-3 product-description" data-name="Product #3" data-price="5">
+                <h3 class="product-name">Product #3</h3>
+                    <img class="img-responsive" src="../Html/Images/black-green-buggy.jpeg" alt="B&G buggy">
+                    <p class="product-price">&dollar; 5</p>
+                    <form class="add-to-cart" action="cart.html" method="post">
+                        <label for="qty-1">Quantity</label>
+                        <div>
+                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                            <input type="number" id="number" value="0" />
+                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                        </div>
+                        <p><input type="submit" value="Add to cart" class="btn" /></p>
+                    </form>
+            </div>
+          </div>     
+           <!-- Footer -->
       <footer  class ="main-footer">
 
 
@@ -121,7 +148,7 @@
             <h4>Store</h4>
               <p><i class="fa fa-fw fa-map-marker"></i> UPRM MoonBuggy</p>
               <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-              <p><i class="fa fa-fw fa-envelope"></i>moonbuggy.design@gmail.com</p>
+              <p><i class="fa fa-fw fa-envelope"></i><a>moonbuggy.design@gmail.com</a></p>
               <br>
               <h4>We accept</h4>
               <p><i class="fa fa-fw fa-cc-amex"></i> PayPal</p>
@@ -134,7 +161,7 @@
           </div>
 
 
-        </div>
+        
 
       </footer>
     </body>
