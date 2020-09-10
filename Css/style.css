@@ -22,7 +22,8 @@ header#main-header img{
 }
 #main-header{
     margin-top: 5%;
-    width: 100%;
+    left:80px;
+    width: 90%;
     height: 150px;
     display: flex;
     position: relative;
@@ -67,6 +68,14 @@ header#main-header h1{
     padding-left: 10px;
     color: #ccc;
 }
+.wtop a:hover {
+    padding-left: 10px;
+    text-decoration-line: none;
+    color: #ccc;
+}
+.wtop .wbar a img{
+    height: 30px;
+}
 /* Left-sided navbar link to home */
 .wbar .w-button {
     position: fixed;
@@ -75,7 +84,7 @@ header#main-header h1{
     padding-bottom: 15px;
     z-index: 99;
 }
-/* Right  */
+/* Right-sided navbar with about, contact, pricing, etc. tabs */
 .wbar .w-right{
     display: inline-block;
     right: 0px;
@@ -88,6 +97,7 @@ header#main-header h1{
     position: fixed;
     background-color: #333;
 }
+
 @media screen and (max-width: 300px) {
 
     .wbar a.w-wide{
@@ -96,14 +106,68 @@ header#main-header h1{
         display: flex;
         z-index: 99;
     }
-    
 }
+/* The sidebar menu */
+.sidenav {
+    height: 100%; 
+    width: 128px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* On smaller screens (less than 450px) change the style of the sidebar */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+.sidenav button.accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+.active, .accordion:hover {
+    cursor: pointer;
+  }
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+/* Footer contents
+    row - container of footer columns 
+    col-footer .s1 - foooter columns
+    e  - last column  */
 .row{
-    margin: 0 10%;
     padding: 5% 0;
 }
 .row-footer{
-    left: 0;
+    left: 5%;
     background-color: #333;
     display: block;
     width: 100%;
@@ -164,9 +228,10 @@ header#main-header h1{
         width: 100px;
     }
 }
-
+/* Container-fluid - contains the header, and lower navbar */
 .container-fluid{
-    width: 90%;
+    width: 75%;
+    left:130px;
     padding-top: 10px;
     /* padding-bottom: 70%; */
     justify-content: center;
@@ -178,6 +243,7 @@ header#main-header h1{
     width: 33%;
     padding: 25px;
 }
+/* .btn-group -  is the lower navbar */
 .btn-group{
     padding: 0;
 }
@@ -208,6 +274,7 @@ header#main-header h1{
     width: 100%;
     text-align: center;
 }
+/* image - image of the blockquote  */
 .image {
     padding: 100px 0;
     height: 600px;
@@ -220,6 +287,7 @@ header#main-header h1{
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
   }
+  /* Container of blockqoute */
 .text{
   color: #f0e9e9;
   font-weight: bold;
@@ -246,6 +314,7 @@ header#main-header h1{
     font-style: italic;
     padding-top: 25px;
 }
+/* Changes styling last line of blockqoute */
 p#footer{
     font-variant: all-petite-caps;
     font: small-caption;
@@ -292,7 +361,7 @@ footer{
 .blocks p{
     padding: 20px;
 }
-
+/* Slideshow on about page */
 #myCarousel{
     padding: 5% 0;
 }

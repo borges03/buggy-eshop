@@ -20,7 +20,8 @@
         <div class="wtop">
             <!--Navbar that moves with page scroll-->
             <div class="wbar" id="myNavbar">
-              <a href="../Html/index.html" class="wbar-item w-button w-wide">MoonBuggy</a> <!--Left-sided navbar link to home-->
+              <a href="../Html/index.html" class="wbar-item w-button w-wide">
+                <img src="../Html/Images/general_motors_logo.jfif"> MoonBuggy </a>
               <!-- Right-sided navbar links -->
               <div class="w-right ">
                 <a href="./about.html" class="w3-bar-item">ABOUT</a>
@@ -31,7 +32,17 @@
               </div>
             </div>
         </div>
-
+         <!-- Side navigation -->
+         <div class="sidenav">
+          <a href="../Html/index.html">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Cart</a>
+          <a class="accordion">Sponsors</a>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+          <a href="#">Contact</a>
+        </div>
 
         <!-- Contains everything below the description at the top -->
         <div class="container-fluid">
@@ -39,14 +50,16 @@
 
             <!--Logos in the top-->
             <header id="main-header" >
-                <img class="img-responsive" src="../Html/images/logo_uprm.png" alt="Logo Uni">
+              <a href="https://www.boeing.com/company/">
+                <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
+              </a>
                 <img class="img-responsive" src="../Html/images/logo_moonbuggy.jfif" alt="Logo MoonBuggy">
                 <h1> About us </h1>
-                <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
-                <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
+                <img class="img-responsive" src="" alt="Logo Sponsor">
+                <a href="https://www.gm.com/">
+                  <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
+                </a>
             </header>
-
-
 
             <!--Lower navbar with buttons-->
             <div class="btn-group btn-group-justified">
@@ -186,7 +199,10 @@
                 <h4>Store</h4>
                 <p><i class="fa fa-fw fa-map-marker"></i> UPRM MoonBuggy</p>
                 <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-                <p><i class="fa fa-fw fa-envelope"></i>moonbuggy.design@gmail.com</p>
+                <a href="mailto:moonbuggy.design@gmail.com" style="color: #fff;">
+                  <p><i class="fa fa-fw fa-envelope">
+                  </i>moonbuggy.design@gmail.com</p>
+                </a>
                 <br>
                 <h4>We accept</h4>
                 <p><i class="fa fa-fw fa-cc-amex"></i> PayPal</p>
@@ -201,7 +217,7 @@
 
             </div>
 
-
+            <script src="../Javascript/style.js"></script>
         </footer>
 
 

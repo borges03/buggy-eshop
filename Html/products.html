@@ -22,8 +22,9 @@
              <!--Navbar that moves with page scroll-->
             <div class="wbar" id="myNavbar">
                 <!--Left-sided navbar link to home-->
-              <a href="../Html/index.html" class="wbar-item w-button w-wide">MoonBuggy</a>
-              <!-- Right-sided navbar links -->
+                <a href="../Html/index.html" class="wbar-item w-button w-wide">
+                    <img src="../Html/Images/general_motors_logo.jfif"> MoonBuggy </a>
+                <!-- Right-sided navbar links -->
               <div class="w-right ">
                 <a href="./about.html" class="wbar-item">ABOUT</a>
                 <a href="./team.html" class="wbar-item"><i class="fa fa-user"></i> TEAM</a>
@@ -34,14 +35,30 @@
             </div>
           </div>
 
+          <!-- Side navigation -->
+        <div class="sidenav">
+            <a href="../Html/index.html">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Cart</a>
+            <a class="accordion">Sponsors</a>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+            <a href="#">Contact</a>
+          </div>
+
         <div class="container-fluid">
           
             <header id="main-header">
-                <img class="img-responsive" src="../Html/images/logo_uprm.png" alt="Logo Uni">
+                <a href="https://www.boeing.com/company/">
+                    <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
+                  </a>
                 <img class="img-responsive" src="../Html/images/logo_moonbuggy.jfif" alt="Logo MoonBuggy">
                 <h1> MoonBuggy Shop </h1>
-                <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
-                <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
+                <img class="img-responsive" src="" alt="Logo Sponsor">
+                <a href="https://www.gm.com/">
+                    <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
+                  </a>
             </header>
 
           <!--Lower navbar with buttons-->
@@ -74,7 +91,11 @@
             <div class="col-sm-3 product-description" data-name="Product #1" data-price="5">
                 <h3 class="product-name">Product #1</h3>
                     <img class="img-responsive" src="../Html/Images/Moonman-playero.jpeg" alt="Moon Man Playero">
+                    <br>
                     <p class="product-price">&dollar; 5</p>
+                    <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis 
+                    doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus
+                    fuga voluptatum dolor cum.</p>
                     <form class="add-to-cart" action="cart.html" method="post">
                         <label for="qty-1">Quantity</label>
                         <div>
@@ -88,7 +109,11 @@
             <div class="col-sm-3 product-description" data-name="Product #2" data-price="5">
                 <h3 class="product-name">Product #2</h3>
                     <img class="img-responsive" src="../Html/Images/Up-Sticker.jpeg" alt="Moon Man Up">
+                    <br>
                     <p class="product-price">&dollar; 5</p>
+                    <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis 
+                    doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus
+                    fuga voluptatum dolor cum.</p>
                     <form class="add-to-cart" action="cart.html" method="post">
                         <label for="qty-1">Quantity</label>
                         <div>
@@ -102,7 +127,11 @@
             <div class="col-sm-3 product-description" data-name="Product #3" data-price="5">
                 <h3 class="product-name">Product #3</h3>
                     <img class="img-responsive" src="../Html/Images/black-green-buggy.jpeg" alt="B&G buggy">
+                    <br>
                     <p class="product-price">&dollar; 5</p>
+                    <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis 
+                    doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus
+                    fuga voluptatum dolor cum.</p>
                     <form class="add-to-cart" action="cart.html" method="post">
                         <label for="qty-1">Quantity</label>
                         <div>
@@ -148,7 +177,10 @@
             <h4>Store</h4>
               <p><i class="fa fa-fw fa-map-marker"></i> UPRM MoonBuggy</p>
               <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-              <p><i class="fa fa-fw fa-envelope"></i><a>moonbuggy.design@gmail.com</a></p>
+              <a href="mailto:moonbuggy.design@gmail.com" style="color: #fff;">
+                <p><i class="fa fa-fw fa-envelope">
+                </i>moonbuggy.design@gmail.com</p>
+              </a>
               <br>
               <h4>We accept</h4>
               <p><i class="fa fa-fw fa-cc-amex"></i> PayPal</p>
@@ -162,7 +194,7 @@
 
 
         
-
+          <script src="../Javascript/style.js"></script>
       </footer>
     </body>
 </html>
