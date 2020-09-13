@@ -9,32 +9,34 @@ body{
     font-family: 'Lato','Segoe UI', Tahoma, Geneva, Verdana;
     display: flex;
     flex-direction: column;
-    font-size: 18px;
     position:static;
     justify-content: center;
 }
 header#main-header img{
-    padding: 10px;
     block-size: 150px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin:25px;
+}header#main-header a{
+  color: transparent;
 }
-#main-header{
-    margin-top: 5%;
-    left:80px;
+header#main-header{
+    margin-left: 15%;
     width: 90%;
     height: 150px;
     display: flex;
     position: relative;
     align-self: center;
     text-align: center;
+    min-inline-size: max-content;
     color: slategrey;
     text-transform: capitalize;
     box-sizing: border-box;
 }
 header#main-header h1{
-    padding: 5% 1%
+    margin-top: 50px;
+    padding-top: 25px;
+    font-variant: all-small-caps;
+    min-inline-size: max-content;
 }
 /* @media son jquery code para controlar el responsiveness 
     (como los componentes del web page cambian
@@ -42,21 +44,30 @@ header#main-header h1{
     ej. como se vera en un telefono, como se vera en un ipad o laptop) */
 
 @media screen and (max-width: 500px) {
+
     #main-header {
       text-align: left;
       width: 350px;
     }
+    header#main-header{
+        margin: 30%;
+        left: 10%;
+        justify-content: space-evenly;
+    }
+    header#main-header a{
+        min-inline-size: fit-content;
+    }
     header#main-header img{
-        display: block;
-        margin-top: 15px;
-        inline-size: 65px;
-        block-size: 65px;
+        display: none;
     }
     header#main-header h1{
         padding: 15px 0;
-        width: 100px;
-        font-size:inherit;
+        width: 300px;
+        align-self: flex-end;
+        font-size:45px;
+        font-variant: all-small-caps;
     }
+
     
 }
 .wtop{
@@ -88,7 +99,7 @@ header#main-header h1{
 .wbar .w-right{
     display: inline-block;
     right: 0px;
-    height: 10%;
+    height: 8%;
     white-space: normal;
     padding: 15px 5px;
     width: 100%;
@@ -97,27 +108,121 @@ header#main-header h1{
     position: fixed;
     background-color: #333;
 }
-
-@media screen and (max-width: 300px) {
-
-    .wbar a.w-wide{
-        background-color: #ffffff;
-        float: right;
-        display: flex;
-        z-index: 99;
+/* when the screen of the device is smaller the sidenav will be opened and closed using a hamburger toggle button */
+@media screen and (max-width: 700px) {
+   
+    .sidenav{
+        top: 50px;
+        left: 0;
+        user-select: none;
+        width: 500px;
+        transform: translateX(-155px);
+        transition: transform 250ms  ease-in-out;
+        /* background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%); */
     }
+    .sidenav a {
+        padding: 6px 8px;
+        border-bottom: #333 solid;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+      }
+    .sidenav a:hover {
+    color: #f1f1f1;
+    }
+    .panel{
+        width: 83%;
+        height: auto;
+    }
+    .sidenav button.accordion {
+        color: #444;
+        padding: 8px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+      /* Animates the hamburger toggle button */
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        top: 10%;
+        left: 15px;
+        height: 22px;
+        width: 22px;
+    }
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: rgb(231, 250, 57);
+    }
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    /* Functionality of the hamburger toggle menu */
+    input[type="checkbox"]:checked ~ .sidenav {
+        transform: translateX(0);
+        width: 500px;
+    }
+    input[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+    
 }
 /* The sidebar menu */
 .sidenav {
     height: 100%; 
-    width: 128px; 
+    width: 20%; 
     position: fixed; 
     z-index: 1; 
-    top: 0; 
+    top: 7%; 
     left: 0;
     background-color: #111; 
-    overflow-x: hidden; 
-    padding-top: 20px;
+    overflow-x: hidden;
   }
   
   /* The navigation menu links */
@@ -140,34 +245,74 @@ header#main-header h1{
     .sidenav a {font-size: 18px;}
   }
   
-.sidenav button.accordion {
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
+
 .active, .accordion:hover {
     cursor: pointer;
   }
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
+    padding: 0;
+    height: auto;
+    scroll-behavior: smooth;
   }
+.panel h2{
+font: bold 26px monospace;
+font-variant: all-small-caps;
+text-align: center;
+border-bottom:2px solid rgb(231, 250, 57);
+}
+.panel li{
+list-style-type: none;
+left: 5px;
+font: bold medium monospace;
+position: relative;
+}
+.panel li span{
+list-style-type: none;
+float: right;
+font: bold medium monospace;
+position: relative;
+}
+.panel ul#cart-items{
+margin: 2px;
+padding: 5%;
+border: 1px solid rgb(190, 190, 190) ; 
+list-style: none;
+}
+.panel ul a{
+padding: 5%;
+margin: 3%;
+border: #cccccc;
+border-radius: 15px;
+background-color: rgb(231, 250, 57);
+font-size: smaller;
+font-weight: bold;
+letter-spacing: 0.1em;
+text-align: center;
+}
+.panel li#sub-total{
+border-bottom: 1px dotted black;
+}
+.panel li#shipping{
+border-bottom: 1px dotted black;
+}
+.panel li#cart-total{
+font-size: larger;
+font-weight: bold;
+}
+.panel li#cart-total span{
+font-size: larger;
+font-weight: bolder;
+}
 /* Footer contents
     row - container of footer columns 
     col-footer .s1 - foooter columns
     e  - last column  */
+
 .row{
     padding: 5% 0;
 }
 .row-footer{
-    left: 5%;
+    left: 15%;
     background-color: #333;
     display: block;
     width: 100%;
@@ -192,8 +337,10 @@ header#main-header h1{
 }
 @media screen and (max-width: 500px){
    footer.main-footer .row-footer{
+       left:0;
+       padding: 5%;
        display: flex;
-       width: 100%;
+       width: 160%;
        overflow-block: clip;
 
     }
@@ -231,7 +378,6 @@ header#main-header h1{
 /* Container-fluid - contains the header, and lower navbar */
 .container-fluid{
     width: 75%;
-    left:130px;
     padding-top: 10px;
     /* padding-bottom: 70%; */
     justify-content: center;
@@ -244,7 +390,7 @@ header#main-header h1{
     padding: 25px;
 }
 /* .btn-group -  is the lower navbar */
-.btn-group{
+/* .btn-group{
     padding: 0;
 }
 .btn-group button{
@@ -262,7 +408,7 @@ header#main-header h1{
     border-collapse: separate;
 }
 .btn-group-justified .btn{
-    width:75%; /* era 75% */
+    width:75%;  
     margin-left: auto;
     margin-right: auto;
 }
@@ -273,11 +419,14 @@ header#main-header h1{
 .btn-group .dropdown-menu{
     width: 100%;
     text-align: center;
-}
+} */
+
 /* image - image of the blockquote  */
 .image {
     padding: 100px 0;
     height: 600px;
+    margin-left: 22%;
+    width: max-content;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -294,9 +443,9 @@ header#main-header h1{
   border: 3px solid #cccccc;
   left: 50%;
   bottom: 50%;
-  transform: translate(15%, -200%);
+  transform: translate(50%, -200%);
   z-index: 0;
-  width: 80%;
+  width: 60%;
   padding: 20px;
   text-align: center;
   filter: blur(0);
@@ -319,6 +468,25 @@ p#footer{
     font-variant: all-petite-caps;
     font: small-caption;
     float: inline-end;
+}
+@media screen and (max-width: 400px){
+    .text{
+        transform: translate(35%, -180%);
+        width: auto;
+    }
+    .w-button{
+        width:100%;
+        background-color: #333;
+        padding: 2% 0;
+        z-index: 99;
+    }
+    div.w-right{
+        top:-60px;
+    }
+    .image{
+        width: 160%;
+        padding: 50px 0px;
+    }
 }
 input[type=text]  {
     color: black;
@@ -343,16 +511,19 @@ input[type=text]:focus#searchbar{
 .button:hover{
     background-color: rgba(231, 250, 57, 0.733);
 }
-footer{
-    left: 0;
+footer.mainfooter{
+    
     background-color: #333;
     display: block;
-    width: 100%;
+    width: 800px;
     margin-top: auto;
     text-align: center;
     color: #fff;
     position:sticky;
     bottom:0;
+}
+.blocks{
+    margin-left:20%;
 }
 .blocks h3{
     padding: 50px;
@@ -364,6 +535,7 @@ footer{
 /* Slideshow on about page */
 #myCarousel{
     padding: 5% 0;
+    margin-left: 5%;
 }
 .carousel-control.right{
     right: 0;

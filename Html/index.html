@@ -35,56 +35,52 @@
           </div>
           
           <!-- Side navigation -->
-        <div class="sidenav">
-          <a href="../Html/index.html">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Cart</a>
-          <a class="accordion">Sponsors</a>
-            <div class="panel">
-              <p>Lorem ipsum...</p>
-            </div>
-          <a href="#">Contact</a>
-        </div>
-       
+          <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+          <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+          </label>
+          <div class="sidenav">
+            <a href="../Html/index.html">Home</a>
+            <a class="accordion">Products</a>
+              <div class="panel">
+                <a href="../Html/products.html">Stickers</a>
+              </div>
+              <a class="accordion">Cart</a>
+              <div class="panel">
+                <h2>Your Shopping Cart</h2>
+                  <ul id="cart-items">
+                    <li id="sub-total"> Subtotal: <span>$0.00</span> </li>
+                    <li id="taxes"> Taxes: <span>$0.00</span></li>
+                    <li id="shipping"> Shipping: <span>$0.00</span></li>
+                    <li id="cart-total"> Total: <span>$0.00</span></li>
+                    <a href="../Html/checkout.html"> Check Out</a>
+                  </ul>
+                <a href="../Html/cart.html"></a>
+              </div>
+            <a class="accordion">Sponsors</a>
+              <div class="panel">
+                <p>Lorem ipsum...</p>
+              </div>
+            <a href="#">Contact</a>
+          </div>
+          
         <div class="container-fluid">
           
             <header id="main-header">
-                <a href="https://www.boeing.com/company/">
+                <a href="https://www.boeing.com/company/"> Sponsor
                   <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
                 </a>
                 <img class="img-responsive" src="../Html/images/logo_moonbuggy.jfif" alt="Logo MoonBuggy">
                 <h1> MoonBuggy Shop </h1>
                 <img class="img-responsive" src="" alt="Logo Sponsor">
-                <a href="https://www.gm.com/">
+                <a href="https://www.gm.com/">Sponsor
                 <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
               </a>
             </header>
 
-          <!--Lower navbar with buttons-->
-          <div class="btn-group btn-group-justified">
-
-            <button type="button" class="btn btn-primary">
-                Home 
-                <a href="../Html/index.html"></a>
-            </button>
-
-              <div class="btn-group">
-
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Shop 
-                <span class="caret"></span>
-                </button>
-
-                <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Shirts</a></li> <!--falta link to shirts page-->
-                <li><a href="../Html/products.html">Stickers</a></li><!--falta link to stickers page-->
-                </ul>
-              
-              </div>
-                <button type="button" class="btn btn-primary">
-                    Contact Us
-                </button>
-          </div>
+         
 
               <!--Search bar-->
               <!-- <input id="searchbar" type="text" name="search" placeholder="Search.." > -->

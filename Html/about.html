@@ -33,16 +33,36 @@
             </div>
         </div>
          <!-- Side navigation -->
+         <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+         <label for="openSidebarMenu" class="sidebarIconToggle">
+           <div class="spinner diagonal part-1"></div>
+           <div class="spinner horizontal"></div>
+           <div class="spinner diagonal part-2"></div>
+         </label>
          <div class="sidenav">
-          <a href="../Html/index.html">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Cart</a>
-          <a class="accordion">Sponsors</a>
-            <div class="panel">
-              <p>Lorem ipsum...</p>
-            </div>
-          <a href="#">Contact</a>
-        </div>
+           <a href="../Html/index.html">Home</a>
+           <a class="accordion">Products</a>
+             <div class="panel">
+               <a href="../Html/products.html">Stickers</a>
+             </div>
+             <a class="accordion">Cart</a>
+             <div class="panel">
+               <h2>Your Shopping Cart</h2>
+                 <ul id="cart-items">
+                   <li id="sub-total"> Subtotal: <span>$0.00</span> </li>
+                   <li id="taxes"> Taxes: <span>$0.00</span></li>
+                   <li id="shipping"> Shipping: <span>$0.00</span></li>
+                   <li id="cart-total"> Total: <span>$0.00</span></li>
+                   <a href="../Html/checkout.html"> Check Out</a>
+                 </ul>
+               <a href="../Html/cart.html"></a>
+             </div>
+           <a class="accordion">Sponsors</a>
+             <div class="panel">
+               <p>Lorem ipsum...</p>
+             </div>
+           <a href="#">Contact</a>
+         </div>
 
         <!-- Contains everything below the description at the top -->
         <div class="container-fluid">
@@ -61,30 +81,7 @@
                 </a>
             </header>
 
-            <!--Lower navbar with buttons-->
-            <div class="btn-group btn-group-justified">
-
-                <button type="button" class="btn btn-primary">
-                    Home 
-                    <a href="../Html/index.html"></a>
-                </button>
-
-                <div class="btn-group">
-
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    Shop 
-                    <span class="caret"></span>
-                    </button>
-
-                    <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Shirts</a></li> <!--falta link to shirts page-->
-                    <li><a href="../Html/products.html">Stickers</a></li><!--falta link to stickers page-->
-                    </ul>
-                </div>
-                    <button type="button" class="btn btn-primary">
-                        Contact Us
-                    </button>
-                </div>
+            
             <!-- Slide de fotos from buggy -->
             <div class="container">
               
