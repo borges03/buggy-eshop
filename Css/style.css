@@ -236,9 +236,15 @@ header#main-header h1{
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: rgb(109, 109, 235);
   }
-  
+  /* Changes font color */
+  .sidenav .panel a {
+      color: #111;
+  }
+  .sidenav .panel a:hover {
+    color: rgb(109, 109, 235)
+}
   /* On smaller screens (less than 450px) change the style of the sidebar */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -253,6 +259,7 @@ header#main-header h1{
     padding: 0;
     height: auto;
     scroll-behavior: smooth;
+    display: none;
   }
 .panel h2{
 font: bold 26px monospace;
@@ -340,7 +347,7 @@ font-weight: bolder;
        left:0;
        padding: 5%;
        display: flex;
-       width: 160%;
+       width: 500px;
        overflow-block: clip;
 
     }
@@ -426,7 +433,7 @@ font-weight: bolder;
     padding: 100px 0;
     height: 600px;
     margin-left: 22%;
-    width: max-content;
+    width: fit-content;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,7 +491,7 @@ p#footer{
         top:-60px;
     }
     .image{
-        width: 160%;
+        width: 500px;
         padding: 50px 0px;
     }
 }

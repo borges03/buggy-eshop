@@ -20,6 +20,11 @@
    
     border-radius: 2px;
 }
+.product-list h3{
+ display: inline;
+ padding: 5%;
+ 
+}
  label{
      font: bolder;
  }
