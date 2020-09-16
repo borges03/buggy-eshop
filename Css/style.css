@@ -347,27 +347,25 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     display: block;
 }
 
-
-/* When you mouse over the navigation links, change their color */
-
-.sidenav a:hover {
-    color: red;
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: rgb(109, 109, 235);
+  }
+  /* Changes font color */
+  .sidenav .panel a {
+      color: #111;
+  }
+  .sidenav .panel a:hover {
+    color: rgb(109, 109, 235)
 }
+  /* On smaller screens (less than 450px) change the style of the sidebar */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
-
-/* On smaller screens (less than 450px) change the style of the sidebar */
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-.active,
-.accordion:hover {
+.active, .accordion:hover {
     cursor: pointer;
 }
 
@@ -431,9 +429,10 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     font-weight: bold;
 }
 
-.panel li#cart-total span {
-    font-size: larger;
-    font-weight: bolder;
+.panel li#cart-total span{
+font-size: larger;
+font-weight: bolder;
+
 }
 
 
@@ -572,7 +571,7 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     padding: 100px 0;
     height: 600px;
     margin-left: 22%;
-    width: max-content;
+    width: fit-content;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

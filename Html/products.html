@@ -89,51 +89,59 @@
         <div class="row product-list">
             <div class="col-sm-3 product-description" data-name="Product #1" data-price="5">
                 <h3 class="product-name">Product #1</h3>
-                <img class="img-responsive" src="../Html/Images/Moonman-playero.jpeg" alt="Moon Man Playero">
-                <br>
-                <p class="product-price">&dollar; 5</p>
-                <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus fuga voluptatum dolor cum.</p>
-                <form class="add-to-cart" action="cart-items" method="post">
-                    <label for="qty-1">Quantity</label>
-                    <div>
-                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                        <input type="number" id="number" value="0" />
-                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
-                    </div>
-                    <p><input type="submit" value="Add to cart" class="btn" /></p>
-                </form>
+
+                    <img class="img-responsive" src="../Html/Images/Moonman-playero.jpeg" alt="Moon Man Playero">
+                    <br>
+                    <p class="product-price">&dollar; 5</p>
+                    <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis 
+                    doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus
+                    fuga voluptatum dolor cum.</p>
+                    <form class="add-to-cart" action="cart-items" method="post">
+                        <label for="qty-1">Quantity</label>
+                        <div>
+                            <input type="button"  onclick="funcOne()" value="-">
+                            <h3 type="number" id="number" value="0">-</h3>
+                            <input type="button" onclick="funcTwo()" value="+">
+                        </div>
+                        <p><input type="submit" value="Add to cart" class="btn"/></p>
+                    </form>
             </div>
             <div class="col-sm-3 product-description" data-name="Product #2" data-price="5">
                 <h3 class="product-name">Product #2</h3>
-                <img class="img-responsive" src="../Html/Images/Up-Sticker.jpeg" alt="Moon Man Up">
-                <br>
-                <p class="product-price">&dollar; 5</p>
-                <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus fuga voluptatum dolor cum.</p>
-                <form class="add-to-cart" action="cart.html" method="post">
-                    <label for="qty-1">Quantity</label>
-                    <div>
-                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                        <input type="number" id="number" value="0" />
-                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
-                    </div>
-                    <p><input type="submit" value="Add to cart" class="btn" /></p>
-                </form>
+                    <img class="img-responsive" src="../Html/Images/Up-Sticker.jpeg" alt="Moon Man Up">
+                    <br>
+                    <p class="product-price">&dollar; 5</p>
+                    <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis 
+                    doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus
+                    fuga voluptatum dolor cum.</p>
+                    <form class="add-to-cart" action="cart.html" method="post">
+                        <label for="qty-1">Quantity</label>
+                        <div>
+                          <input type="button"  onclick="funcOne()" value="-">
+                          <h3 type="number" id="number" value="0">-</h3>
+                          <input type="button" onclick="funcTwo()" value="+">
+                        </div>
+                        <p><input type="submit" value="Add to cart" class="btn" /></p>
+                    </form>
             </div>
             <div class="col-sm-3 product-description" data-name="Product #3" data-price="5">
                 <h3 class="product-name">Product #3</h3>
-                <img class="img-responsive" src="../Html/Images/black-green-buggy.jpeg" alt="B&G buggy">
-                <br>
-                <p class="product-price">&dollar; 5</p>
-                <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus fuga voluptatum dolor cum.</p>
-                <form class="add-to-cart" action="cart.html" method="post">
-                    <label for="qty-1">Quantity</label>
-                    <div>
-                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                        <input type="number" id="number" value="0" />
-                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
-                    </div>
-                    <p><input type="submit" value="Add to cart" class="btn" /></p>
-                </form>
+                    <img class="img-responsive" src="../Html/Images/black-green-buggy.jpeg" alt="B&G buggy">
+                    <br>
+                    <p class="product-price">&dollar; 5</p>
+                    <p class="descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, possimus porro? Debitis 
+                    doloribus tempore hic quis atque? Omnis dolorum ducimus sit debitis neque, doloribus, facilis voluptatibus
+                    fuga voluptatum dolor cum.</p>
+                    <form class="add-to-cart" action="cart.html" method="post">
+                        <label for="qty-1">Quantity</label>
+                        <div>
+                          <input type="button"  onclick="funcOne()" value="-">
+                          <h3 type="number" id="number" value="0">-</h3>
+                          <input type="button" onclick="funcTwo()" value="+">
+                        </div>
+                        <p><input type="submit" value="Add to cart" class="btn" /></p>
+                    </form>
+
             </div>
         </div>
         <!-- Footer -->
