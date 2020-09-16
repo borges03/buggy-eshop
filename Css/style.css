@@ -128,6 +128,94 @@ header#main-header h1 {
 }
 
 
+/* Hamburger for normal PC screens */
+
+
+/* Animates the hamburger toggle button */
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    top: 9%;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(231, 250, 57);
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+
+/* Functionality of the hamburger toggle menu */
+
+input[type="checkbox"]:checked~.sidenav {
+    transform: translateX(0);
+    width: 250px;
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle {
+    transform: translate(100px, 0px);
+}
+
+
 /* when the screen of the device is smaller the sidenav will be opened and closed using a hamburger toggle button */
 
 @media screen and (max-width: 700px) {
@@ -135,7 +223,7 @@ header#main-header h1 {
         top: 50px;
         left: 0;
         user-select: none;
-        width: 500px;
+        width: 250px;
         transform: translateX(-155px);
         transition: transform 250ms ease-in-out;
         /* background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%); */
@@ -207,7 +295,7 @@ header#main-header h1 {
     /* Functionality of the hamburger toggle menu */
     input[type="checkbox"]:checked~.sidenav {
         transform: translateX(0);
-        width: 500px;
+        width: 250px;
     }
     input[type=checkbox] {
         transition: all 0.3s;
@@ -245,6 +333,7 @@ header#main-header h1 {
     left: 0;
     background-color: #111;
     overflow-x: hidden;
+    transform: translateX(-280px);
 }
 
 
