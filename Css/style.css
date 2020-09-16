@@ -1,25 +1,30 @@
-
-html{
+html {
     overflow: scroll;
 }
-@-ms-viewport{
+
+@-ms-viewport {
     width: device-width;
 }
-body{
-    font-family: 'Lato','Segoe UI', Tahoma, Geneva, Verdana;
+
+body {
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana;
     display: flex;
     flex-direction: column;
-    position:static;
+    position: static;
     justify-content: center;
 }
-header#main-header img{
+
+header#main-header img {
     block-size: 150px;
     display: block;
-    margin:25px;
-}header#main-header a{
-  color: transparent;
+    margin: 25px;
 }
-header#main-header{
+
+header#main-header a {
+    color: transparent;
+}
+
+header#main-header {
     margin-left: 15%;
     width: 90%;
     height: 150px;
@@ -32,62 +37,68 @@ header#main-header{
     text-transform: capitalize;
     box-sizing: border-box;
 }
-header#main-header h1{
+
+header#main-header h1 {
     margin-top: 50px;
     padding-top: 25px;
     font-variant: all-small-caps;
     min-inline-size: max-content;
 }
+
+
 /* @media son jquery code para controlar el responsiveness 
     (como los componentes del web page cambian
     cuando se cambia el viewport/device width,
     ej. como se vera en un telefono, como se vera en un ipad o laptop) */
 
 @media screen and (max-width: 500px) {
-
     #main-header {
-      text-align: left;
-      width: 350px;
+        text-align: left;
+        width: 350px;
     }
-    header#main-header{
+    header#main-header {
         margin: 30%;
         left: 10%;
         justify-content: space-evenly;
     }
-    header#main-header a{
+    header#main-header a {
         min-inline-size: fit-content;
     }
-    header#main-header img{
+    header#main-header img {
         display: none;
     }
-    header#main-header h1{
+    header#main-header h1 {
         padding: 15px 0;
         width: 300px;
         align-self: flex-end;
-        font-size:45px;
+        font-size: 45px;
         font-variant: all-small-caps;
     }
-
-    
 }
-.wtop{
+
+.wtop {
     width: 100%;
     box-sizing: content-box;
 }
 
-.wtop a{
+.wtop a {
     padding-left: 10px;
     color: #ccc;
 }
+
 .wtop a:hover {
     padding-left: 10px;
     text-decoration-line: none;
     color: #ccc;
 }
-.wtop .wbar a img{
+
+.wtop .wbar a img {
     height: 30px;
 }
+
+
 /* Left-sided navbar link to home */
+
 .wbar .w-button {
     position: fixed;
     left: 10px;
@@ -95,8 +106,11 @@ header#main-header h1{
     padding-bottom: 15px;
     z-index: 99;
 }
+
+
 /* Right-sided navbar with about, contact, pricing, etc. tabs */
-.wbar .w-right{
+
+.wbar .w-right {
     display: inline-block;
     right: 0px;
     height: 8%;
@@ -108,16 +122,110 @@ header#main-header h1{
     position: fixed;
     background-color: #333;
 }
+
+.sidenav .panel a {
+    color: blue;
+}
+
+
+/* Hamburger for normal PC screens */
+
+
+/* Animates the hamburger toggle button */
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    top: 9%;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(231, 250, 57);
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+
+/* Functionality of the hamburger toggle menu */
+
+input[type="checkbox"]:checked~.sidenav {
+    transform: translateX(0);
+    width: 250px;
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+input[type=checkbox]:checked~.sidebarIconToggle {
+    transform: translate(100px, 0px);
+}
+
+
 /* when the screen of the device is smaller the sidenav will be opened and closed using a hamburger toggle button */
+
 @media screen and (max-width: 700px) {
-   
-    .sidenav{
+    .sidenav {
         top: 50px;
         left: 0;
         user-select: none;
-        width: 500px;
+        width: 250px;
         transform: translateX(-155px);
-        transition: transform 250ms  ease-in-out;
+        transition: transform 250ms ease-in-out;
         /* background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%); */
     }
     .sidenav a {
@@ -127,11 +235,11 @@ header#main-header h1{
         font-size: 18px;
         color: #818181;
         display: block;
-      }
-    .sidenav a:hover {
-    color: #f1f1f1;
     }
-    .panel{
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    .panel {
         width: 83%;
         height: auto;
     }
@@ -143,8 +251,8 @@ header#main-header h1{
         border: none;
         outline: none;
         transition: 0.4s;
-      }
-      /* Animates the hamburger toggle button */
+    }
+    /* Animates the hamburger toggle button */
     .sidebarIconToggle {
         transition: all 0.3s;
         box-sizing: border-box;
@@ -185,54 +293,60 @@ header#main-header h1{
         margin-top: 3px;
     }
     /* Functionality of the hamburger toggle menu */
-    input[type="checkbox"]:checked ~ .sidenav {
+    input[type="checkbox"]:checked~.sidenav {
         transform: translateX(0);
-        width: 500px;
+        width: 250px;
     }
     input[type=checkbox] {
         transition: all 0.3s;
         box-sizing: border-box;
         display: none;
     }
-    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
         transition: all 0.3s;
         box-sizing: border-box;
         opacity: 0;
     }
-    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
         transition: all 0.3s;
         box-sizing: border-box;
         transform: rotate(135deg);
         margin-top: 8px;
     }
-    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
         transition: all 0.3s;
         box-sizing: border-box;
         transform: rotate(-135deg);
         margin-top: -9px;
     }
-    
 }
+
+
 /* The sidebar menu */
+
 .sidenav {
-    height: 100%; 
-    width: 20%; 
-    position: fixed; 
-    z-index: 1; 
-    top: 7%; 
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 7%;
     left: 0;
-    background-color: #111; 
+    background-color: #111;
     overflow-x: hidden;
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
+    transform: translateX(-280px);
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
     padding: 6px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
-  }
+}
+
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
@@ -250,75 +364,88 @@ header#main-header h1{
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-  
 
 .active, .accordion:hover {
     cursor: pointer;
-  }
+}
+
 .panel {
     padding: 0;
     height: auto;
     scroll-behavior: smooth;
     display: none;
-  }
-.panel h2{
-font: bold 26px monospace;
-font-variant: all-small-caps;
-text-align: center;
-border-bottom:2px solid rgb(231, 250, 57);
 }
-.panel li{
-list-style-type: none;
-left: 5px;
-font: bold medium monospace;
-position: relative;
+
+.panel h2 {
+    font: bold 26px monospace;
+    font-variant: all-small-caps;
+    text-align: center;
+    border-bottom: 2px solid rgb(231, 250, 57);
 }
-.panel li span{
-list-style-type: none;
-float: right;
-font: bold medium monospace;
-position: relative;
+
+.panel li {
+    list-style-type: none;
+    left: 5px;
+    font: bold medium monospace;
+    position: relative;
 }
-.panel ul#cart-items{
-margin: 2px;
-padding: 5%;
-border: 1px solid rgb(190, 190, 190) ; 
-list-style: none;
+
+.panel li span {
+    list-style-type: none;
+    float: right;
+    font: bold medium monospace;
+    position: relative;
 }
-.panel ul a{
-padding: 5%;
-margin: 3%;
-border: #cccccc;
-border-radius: 15px;
-background-color: rgb(231, 250, 57);
-font-size: smaller;
-font-weight: bold;
-letter-spacing: 0.1em;
-text-align: center;
+
+.panel ul#cart-items {
+    margin: 2px;
+    padding: 5%;
+    border: 1px solid rgb(190, 190, 190);
+    list-style: none;
 }
-.panel li#sub-total{
-border-bottom: 1px dotted black;
+
+.panel ul a {
+    padding: 5%;
+    margin: 3%;
+    border: #cccccc;
+    border-radius: 15px;
+    background-color: rgb(231, 250, 57);
+    font-size: smaller;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
 }
-.panel li#shipping{
-border-bottom: 1px dotted black;
+
+.panel li#sub-total {
+    border-bottom: 1px dotted black;
 }
-.panel li#cart-total{
-font-size: larger;
-font-weight: bold;
+
+.panel li#shipping {
+    border-bottom: 1px dotted black;
 }
+
+.panel li#cart-total {
+    font-size: larger;
+    font-weight: bold;
+}
+
 .panel li#cart-total span{
 font-size: larger;
 font-weight: bolder;
+
 }
+
+
 /* Footer contents
     row - container of footer columns 
     col-footer .s1 - foooter columns
     e  - last column  */
 
-.row{
+.row {
     padding: 5% 0;
 }
-.row-footer{
+
+.row-footer {
     left: 15%;
     background-color: #333;
     display: block;
@@ -329,61 +456,65 @@ font-weight: bolder;
     color: #fff;
     position: absolute;
 }
-.col-footer .s1{
+
+.col-footer .s1 {
     width: 100%;
     text-align: center;
 }
-.e{
+
+.e {
     text-align: left;
-    
 }
-.col-footer{
+
+.col-footer {
     box-sizing: border-box;
     float: left;
     width: 33.3%;
 }
-@media screen and (max-width: 500px){
-   footer.main-footer .row-footer{
-       left:0;
-       padding: 5%;
-       display: flex;
-       width: 500px;
-       overflow-block: clip;
 
+@media screen and (max-width: 500px) {
+    footer.main-footer .row-footer {
+        left: 0;
+        padding: 5%;
+        display: flex;
+        width: 160%;
+        overflow-block: clip;
     }
-    footer.main-footer h4{
+    footer.main-footer h4 {
         font-size: 25px;
         align-items: center;
     }
-    footer.main-footer p{
+    footer.main-footer p {
         font-size: 15px;
     }
-    
-    footer.main-footer div.col-footer.s1.e{
+    footer.main-footer div.col-footer.s1.e {
         float: inline-end;
         margin: 5px;
     }
-    footer.main-footer div.col-footer.s1.e p a{
+    footer.main-footer div.col-footer.s1.e p a {
         font-size: 15px;
         width: fit-content;
         color: #ffffff;
     }
-   footer.main-footer div.col-footer {
-       float:inline-start;
-       margin: 0;
-       display: block;
-       width: 70%;
-       text-align: center;
+    footer.main-footer div.col-footer {
+        float: inline-start;
+        margin: 0;
+        display: block;
+        width: 70%;
+        text-align: center;
     }
-    footer.main-footer div.col-footer form{
+    footer.main-footer div.col-footer form {
         width: 100px;
     }
-    footer.main-footer div.col-footer input[type=text]{
+    footer.main-footer div.col-footer input[type=text] {
         width: 100px;
     }
 }
+
+
 /* Container-fluid - contains the header, and lower navbar */
-.container-fluid{
+
+.container-fluid {
     width: 75%;
     padding-top: 10px;
     /* padding-bottom: 70%; */
@@ -391,12 +522,17 @@ font-weight: bolder;
     align-items: center;
     align-self: center;
 }
-.col-md-4{
+
+.col-md-4 {
     text-align: center;
     width: 33%;
     padding: 25px;
 }
+
+
 /* .btn-group -  is the lower navbar */
+
+
 /* .btn-group{
     padding: 0;
 }
@@ -428,7 +564,9 @@ font-weight: bolder;
     text-align: center;
 } */
 
+
 /* image - image of the blockquote  */
+
 .image {
     padding: 100px 0;
     height: 600px;
@@ -442,121 +580,144 @@ font-weight: bolder;
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
-  }
-  /* Container of blockqoute */
-.text{
-  color: #f0e9e9;
-  font-weight: bold;
-  border: 3px solid #cccccc;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(50%, -200%);
-  z-index: 0;
-  width: 60%;
-  padding: 20px;
-  text-align: center;
-  filter: blur(0);
+}
+
+
+/* Container of blockqoute */
+
+.text {
+    color: #f0e9e9;
+    font-weight: bold;
+    border: 3px solid #cccccc;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(50%, -200%);
+    z-index: 0;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    filter: blur(0);
     -webkit-filter: blur(0);
     -moz-filter: blur(0);
     -o-filter: blur(0);
     -ms-filter: blur(0);
-  }
-.blockqoute{
+}
+
+.blockqoute {
     background-color: #ffffff;
 }
-.blockquote-reverse p{
+
+.blockquote-reverse p {
     text-decoration-style: double;
     text-transform: uppercase;
     font-style: italic;
     padding-top: 25px;
 }
+
+
 /* Changes styling last line of blockqoute */
-p#footer{
+
+p#footer {
     font-variant: all-petite-caps;
     font: small-caption;
     float: inline-end;
 }
-@media screen and (max-width: 400px){
-    .text{
+
+@media screen and (max-width: 400px) {
+    .text {
         transform: translate(35%, -180%);
         width: auto;
     }
-    .w-button{
-        width:100%;
+    .w-button {
+        width: 100%;
         background-color: #333;
         padding: 2% 0;
         z-index: 99;
     }
-    div.w-right{
-        top:-60px;
+    div.w-right {
+        top: -60px;
     }
-    .image{
-        width: 500px;
+    .image {
+        width: 160%;
         padding: 50px 0px;
     }
 }
-input[type=text]  {
+
+input[type=text] {
     color: black;
     padding-top: 5px;
     border: 5px solid rgb(109, 109, 235);
     width: auto;
-    
-  }
-input[type=text]#searchbar{
+}
+
+input[type=text]#searchbar {
     width: auto;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
-input[type=text]:focus#searchbar{
-    width: 100%; /*width of searchbar grows when clicked/making a search*/
-  }
-.button{
-    background-color:  rgb(231, 250, 57);
+
+input[type=text]:focus#searchbar {
+    width: 100%;
+    /*width of searchbar grows when clicked/making a search*/
+}
+
+.button {
+    background-color: rgb(231, 250, 57);
     border-radius: 15;
     padding-bottom: 20px;
 }
-.button:hover{
+
+.button:hover {
     background-color: rgba(231, 250, 57, 0.733);
 }
-footer.mainfooter{
-    
+
+footer.mainfooter {
     background-color: #333;
     display: block;
     width: 800px;
     margin-top: auto;
     text-align: center;
     color: #fff;
-    position:sticky;
-    bottom:0;
+    position: sticky;
+    bottom: 0;
 }
-.blocks{
-    margin-left:20%;
+
+.blocks {
+    margin-left: 20%;
 }
-.blocks h3{
+
+.blocks h3 {
     padding: 50px;
     text-align: center;
 }
-.blocks p{
+
+.blocks p {
     padding: 20px;
 }
+
+
 /* Slideshow on about page */
-#myCarousel{
+
+#myCarousel {
     padding: 5% 0;
     margin-left: 5%;
 }
-.carousel-control.right{
+
+.carousel-control.right {
     right: 0;
     margin-right: 10%;
     background-repeat: repeat;
     background-image: none;
 }
-.carousel-control.left{
+
+.carousel-control.left {
     left: 0;
     margin-left: 5%;
     background-repeat: repeat;
     background-image: none;
 }
-.carousel-inner .item{
+
+.carousel-inner .item {
     margin-left: 5%;
     max-width: 100%;
     height: auto;
