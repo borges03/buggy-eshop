@@ -349,9 +349,10 @@ input[type=checkbox]:checked~.sidebarIconToggle {
 
   
   /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: rgb(109, 109, 235);
-  }
+    .sidenav a:hover {
+        color: red;
+    }
+  
   /* Changes font color */
   .sidenav .panel a {
       color: #111;
@@ -530,47 +531,12 @@ font-weight: bolder;
 }
 
 
-/* .btn-group -  is the lower navbar */
-
-
-/* .btn-group{
-    padding: 0;
-}
-.btn-group button{
-    color: #333;
-}
-.btn-group-justified>.btn, .btn-group-justified>.btn-group {
-    width: 33%;
-    float:none;
-    display: table-cell;
-}
-.btn-group-justified{
-    width: 100%;
-    display: inline-flex;
-    table-layout: fixed;
-    border-collapse: separate;
-}
-.btn-group-justified .btn{
-    width:75%;  
-    margin-left: auto;
-    margin-right: auto;
-}
-.btn-primary{
-    background-color: #ccc;
-    border-color: dimgray;
-}
-.btn-group .dropdown-menu{
-    width: 100%;
-    text-align: center;
-} */
-
-
 /* image - image of the blockquote  */
 
 .image {
     padding: 100px 0;
     height: 600px;
-    margin-left: 22%;
+    margin-left: 25%;
     width: fit-content;
     background-position: center;
     background-repeat: no-repeat;
