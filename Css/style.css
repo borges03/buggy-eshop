@@ -137,7 +137,7 @@ header#main-header h1 {
     transition: all 0.3s;
     box-sizing: border-box;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     z-index: 97;
     top: 10%;
     left: 15px;
