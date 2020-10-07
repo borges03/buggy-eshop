@@ -16,9 +16,10 @@ for (i = 0; i < acc.length; i++) {
   
 }
 // Controls the quantity of products selected by user
-var Count = 0;
+var Count = 0, j;
+
 function funcOne(){
-   Count-- < 1 ? Count = 0 : '';   
+   Count-- < 1 ? Count = 0 : ''; 
    document.getElementById("number").innerHTML=Count;
 }
 function funcTwo(){

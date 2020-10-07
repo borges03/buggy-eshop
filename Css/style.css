@@ -25,7 +25,6 @@ header#main-header a {
 }
 
 header#main-header {
-    margin-left: 5%;
     width: 90%;
     height: 150px;
     display: flex;
@@ -182,7 +181,7 @@ header#main-header h1 {
 
 input[type="checkbox"]:checked~.sidenav {
     transform: translateX(0);
-    width: 250px;
+    width: 15vw;
 }
 
 input[type=checkbox] {
@@ -223,7 +222,7 @@ input[type=checkbox]:checked~.sidebarIconToggle {
         top: 50px;
         left: 0;
         user-select: none;
-        width: 250px;
+        width: 10vw;
         transform: translateX(-155px);
         transition: transform 250ms ease-in-out;
         /* background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%); */
@@ -295,7 +294,7 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     /* Functionality of the hamburger toggle menu */
     input[type="checkbox"]:checked~.sidenav {
         transform: translateX(0);
-        width: 250px;
+        width: 15vw;
     }
     input[type=checkbox] {
         transition: all 0.3s;
@@ -326,7 +325,6 @@ input[type=checkbox]:checked~.sidebarIconToggle {
 
 .sidenav {
     height: 100%;
-    width: 20%;
     position: fixed;
     z-index: 1;
     top: 7%;
@@ -535,8 +533,8 @@ font-weight: bolder;
 
 .image {
     padding: 100px 0;
-    height: 600px;
-    margin-left: 25%;
+    height: 85vh;
+    margin-left: 15vw;
     width: fit-content;
     background-position: center;
     background-repeat: no-repeat;
@@ -555,9 +553,7 @@ font-weight: bolder;
     color: #f0e9e9;
     font-weight: bold;
     border: 3px solid #cccccc;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(50%, -200%);
+    transform: translate(20vw, -50vh);
     z-index: 0;
     width: 60%;
     padding: 20px;
@@ -649,7 +645,7 @@ footer.mainfooter {
 }
 
 .blocks {
-    margin-left: 20%;
+    margin: 5vw 0;
 }
 
 .blocks h3 {
@@ -666,25 +662,34 @@ footer.mainfooter {
 
 #myCarousel {
     padding: 5% 0;
-    margin-left: 5%;
 }
 
 .carousel-control.right {
     right: 0;
-    margin-right: 10%;
+    margin-right: 15vw;
     background-repeat: repeat;
     background-image: none;
 }
 
 .carousel-control.left {
     left: 0;
-    margin-left: 5%;
     background-repeat: repeat;
     background-image: none;
 }
 
 .carousel-inner .item {
-    margin-left: 5%;
     max-width: 100%;
     height: auto;
+}
+
+/* Twitter feed conatiner */
+.twitter-container{
+   margin: 5vw 45vh;
+   width: 55vw;
+   height: 65vh;
+   overflow-y: scroll;
+}
+#twitter-widget-0{
+    inline-size: -webkit-fill-available;
+
 }
