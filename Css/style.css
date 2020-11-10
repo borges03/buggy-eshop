@@ -1,8 +1,9 @@
 html {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 @-ms-viewport {
+    overflow-wrap: break-word;
     width: device-width;
 }
 
@@ -100,7 +101,6 @@ header#main-header h1 {
 
 .wbar .w-button {
     position: fixed;
-    left: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
     z-index: 99;
@@ -112,7 +112,7 @@ header#main-header h1 {
 .wbar .w-right {
     display: inline-block;
     right: 0px;
-    height: 8%;
+    height: 8vh;
     white-space: normal;
     padding: 15px 5px;
     width: 100%;
@@ -137,7 +137,7 @@ header#main-header h1 {
     box-sizing: border-box;
     cursor: pointer;
     position: fixed;
-    z-index: 97;
+    z-index: 99;
     top: 10%;
     left: 15px;
     height: 22px;
@@ -184,7 +184,7 @@ input[type="checkbox"]:checked~.sidenav {
     width: 15vw;
 }
 
-input[type=checkbox] {
+input[type=checkbox]{
     transition: all 0.3s;
     box-sizing: border-box;
     display: none;
@@ -211,7 +211,7 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
 }
 
 input[type=checkbox]:checked~.sidebarIconToggle {
-    transform: translateX(150px);
+    transform: translateX(11vw);
 }
 
 
@@ -219,7 +219,7 @@ input[type=checkbox]:checked~.sidebarIconToggle {
 
 @media screen and (max-width: 700px) {
     .sidenav {
-        top: 50px;
+        top: 6vh;
         left: 0;
         user-select: none;
         width: 10vw;
@@ -257,7 +257,7 @@ input[type=checkbox]:checked~.sidebarIconToggle {
         box-sizing: border-box;
         cursor: pointer;
         position: absolute;
-        z-index: 99;
+        z-index: 100;
         top: 10%;
         left: 15px;
         height: 22px;
@@ -294,12 +294,15 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     /* Functionality of the hamburger toggle menu */
     input[type="checkbox"]:checked~.sidenav {
         transform: translateX(0);
-        width: 15vw;
+        width: 100%;
     }
     input[type=checkbox] {
         transition: all 0.3s;
         box-sizing: border-box;
         display: none;
+    }
+    input[type=checkbox]:checked~.sidebarIconToggle {
+        transform: translateX(330px);
     }
     input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
         transition: all 0.3s;
@@ -326,8 +329,8 @@ input[type=checkbox]:checked~.sidebarIconToggle {
 .sidenav {
     height: 100%;
     position: fixed;
-    z-index: 1;
-    top: 7%;
+    z-index: 95;
+    top: 8vh;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
@@ -446,6 +449,7 @@ font-weight: bolder;
 
 .row-footer {
     left: 0;
+    justify-content: space-evenly;
     background-color: #333;
     display: block;
     width: 100%;
@@ -458,7 +462,7 @@ font-weight: bolder;
 
 .col-footer .s1 {
     width: 100%;
-    text-align: center;
+    text-align: justify;
 }
 
 .e {
@@ -509,7 +513,6 @@ font-weight: bolder;
         width: 100px;
     }
 }
-
 
 /* Container-fluid - contains the header, and lower navbar */
 
@@ -644,6 +647,7 @@ footer.mainfooter {
     bottom: 0;
 }
 
+
 .blocks {
     margin: 5vw 0;
 }
@@ -656,7 +660,6 @@ footer.mainfooter {
 .blocks p {
     padding: 20px;
 }
-
 
 /* Slideshow on about page */
 
@@ -681,15 +684,34 @@ footer.mainfooter {
     max-width: 100%;
     height: auto;
 }
-
+.sidenav.sponsor {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 35vh;
+    left: 0;
+    width: 22vh;
+    overflow-y: hidden;
+    background-color: white;
+    transform: translateX(0);
+}
 /* Twitter feed conatiner */
 .twitter-container{
-   margin: 5vw 45vh;
+   margin: 5vw 25vh;
    width: 55vw;
    height: 65vh;
    overflow-y: scroll;
 }
 #twitter-widget-0{
-    inline-size: -webkit-fill-available;
 
+    inline-size: -webkit-fill-available;
+}
+/* Team page styling */
+.fb-page{
+    margin: 2vw 35vh;
+    width: 75vw;
+    inline-size: 75vw;
+}
+.container.social-post{
+    margin-bottom: 25vh;
 }

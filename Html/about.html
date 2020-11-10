@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+    defer></script>
+    <script src="Storage.js"></script>
     <title>About MoonBuggy</title>
     <!--Tab title-->
+    <link rel="stylesheet" href="StorageStyle.css">
     <link rel="stylesheet" href="../Css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="../tablogo.png">
@@ -17,8 +22,6 @@
 
 
 <body>
-
-
 
     <div class="wtop">
         <!--Navbar that moves with page scroll-->
@@ -30,7 +33,7 @@
                 <a href="./about.html" class="w3-bar-item">ABOUT</a>
                 <a href="./team.html" class="w3-bar-item"><i class="fa fa-user"></i> TEAM</a>
                 <a href="./work.html" class="w3-bar-item"><i class="fa fa-th"></i> WORK</a>
-                <a href="./pricing.html" class="w3-bar-item"><i class="fa fa-usd"></i> Donate</a>
+                <a href="./donate.html" class="w3-bar-item"><i class="fa fa-usd"></i> DONATE</a>
                 <a href="./contact.html" class="w3-bar-item"><i class="fa fa-envelope"></i> CONTACT</a>
             </div>
         </div>
@@ -61,28 +64,36 @@
             </ul>
             <a href="../Html/cart.html"></a>
         </div>
-        <a class="accordion">Sponsors</a>
-        <div class="panel">
-            <p>Lorem ipsum...</p>
-        </div>
+        
         <a href="#">Contact</a>
     </div>
+        <!-- Sponsors List -->
+    <div class="sidenav sponsor">
+        <h2>Meet our Sponsors!</h2>
+        <br>
+        <a href="https://www.boeing.com/company/">
+            <img class="img-responsive" src="../Html/images/sponsors/boeing.png" alt="Logo Sponsor">
+        </a>
+        <a href="https://www.gm.com/">
+            <img class="img-responsive" src="../Html/images/sponsors/gm.png" alt="Logo Sponsor">
+        </a>
+        <a href="https://www.chevron.com/">
+            <img class="img-responsive" src="../Html/images/sponsors/chevron.png" alt="Logo Sponsor">
+        </a>
+        <a href="https://navalnuclearlab.energy.gov/">
+            <img class="img-responsive" src="../Html/images/sponsors/NNL.png" alt="Logo Sponsor">
+        </a>
 
+    </div>
     <!-- Contains everything below the description at the top -->
     <div class="container-fluid">
 
-
         <!--Logos in the top-->
         <header id="main-header">
-            <a href="https://www.boeing.com/company/">
-                <img class="img-responsive" src="../Html/images/logo_boeing.png" alt="Logo Sponsor">
-            </a>
+           
             <img class="img-responsive" src="../Html/images/logo_moonbuggy.jfif" alt="Logo MoonBuggy">
             <h1> About us </h1>
-            <img class="img-responsive" src="" alt="Logo Sponsor">
-            <a href="https://www.gm.com/">
-                <img class="img-responsive" src="../Html/images/general_motors_logo.jfif" alt="Logo Sponsor">
-            </a>
+            
         </header>
 
 
@@ -176,6 +187,11 @@
                     <p><input type="text" placeholder="Message" name="Message" required></p>
                     <button type="submit" class="">Send</button>
                 </form>
+                <br>
+                <a href="https://www.facebook.com/UPRMMET/"><i class="fa fa-facebook-official "></i></a>
+                <a href="#"><i class="fa fa-instagram "></i></a>
+                <!-- <a href="#"><i class="fa fa-snapchat"></i></a> -->
+                <a href="https://twitter.com/UPRMMET"><i class="fa fa-twitter "></i></a>
             </div>
 
 
@@ -192,6 +208,12 @@
                 <!--falta link to return page-->
                 <p><a href="#">Help</a></p>
                 <!--falta link to help page-->
+                <br>
+                <h4>We accept</h4>
+                <p><i class="fa fa-fw fa-cc-amex"></i> PayPal</p>
+                <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+                
+
             </div>
 
 
@@ -199,23 +221,20 @@
                 <h4>Store</h4>
                 <p><i class="fa fa-fw fa-map-marker"></i>
                   <a href="https://www.google.com/maps/place/Edificio+Antonio+Luchetti,+Mayag%C3%BCez,+00682/@18.2086038,-67.1422029,17z/data=!3m1!4b1!4m5!3m4!1s0x8c02b3cb61c2df37:0x8d9a370bf12094cb!8m2!3d18.2085987!4d-67.1400142">
-                     UPRM MoonBuggy</a></p>
+                     UPRM MoonBuggy</a>
+                </p>
                   <a href="mailto:moonbuggy.design@gmail.com" style="color: #fff;">
                   <p><i class="fa fa-fw fa-envelope">
                   </i>moonbuggy.design@gmail.com</p>
                 </a>
                 <br>
-                <h4>We accept</h4>
-                <p><i class="fa fa-fw fa-cc-amex"></i> PayPal</p>
-                <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+                <div class="col-footer s1" id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.2511345677945!2d-67.14220288563571!3d18.208603783394086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c02b3cb61c2df37%3A0x8d9a370bf12094cb!2sEdificio%20Antonio%20Luchetti%2C%20Mayag%C3%BCez%2C%2000682!5e1!3m2!1ses!2spr!4v1604535871555!5m2!1ses!2spr" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                
                 <br>
-                <a href="https://www.facebook.com/UPRMMET/"><i class="fa fa-facebook-official "></i></a>
-                <a href="#"><i class="fa fa-instagram "></i></a>
-                <!-- <a href="#"><i class="fa fa-snapchat"></i></a> -->
-                <a href="https://twitter.com/UPRMMET"><i class="fa fa-twitter "></i></a>
             </div>
-
-
+            
         </div>
 
         <script src="../Javascript/style.js"></script>
