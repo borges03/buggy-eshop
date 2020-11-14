@@ -322,7 +322,11 @@ input[type=checkbox]:checked~.sidebarIconToggle {
         margin-top: -9px;
     }
 }
-
+/* Controls the size of social media feeds */
+.feed_size{
+    height: 400px;
+    width: 400px;
+}
 
 /* The sidebar menu */
 
@@ -697,21 +701,33 @@ footer.mainfooter {
 }
 /* Twitter feed conatiner */
 .twitter-container{
-   margin: 5vw 25vh;
-   width: 55vw;
+   /* margin: 5vw 10vh; */
+   width: 40vw;
    height: 65vh;
    overflow-y: scroll;
+   /* float: left; */
 }
-#twitter-widget-0{
 
-    inline-size: -webkit-fill-available;
-}
 /* Team page styling */
 .fb-page{
-    margin: 2vw 35vh;
-    width: 75vw;
+    /* margin: 1vw 35vh; */
+    /* width: 75vw;
     inline-size: 75vw;
+    float: right; */
+    display: inline-block;
 }
+
 .container.social-post{
     margin-bottom: 25vh;
+    text-align: end;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: inline-table;
+}
+
+.grid-item{
+    display: inline-block;
 }
