@@ -57,8 +57,6 @@ header#main-header h1 {
         width: 350px;
     }
     header#main-header {
-        margin: 30%;
-        left: 10%;
         justify-content: space-evenly;
     }
     header#main-header a {
@@ -670,16 +668,36 @@ footer.mainfooter {
 #myCarousel {
     padding: 5% 0;
 }
-
+.carousel-caption{
+    position: absolute;
+    align-self: center;
+    right: 16%;
+    left: 0;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
 .carousel-control.right {
     right: 0;
-    margin-right: 15vw;
+    margin-right: 10vw;
     background-repeat: repeat;
     background-image: none;
 }
 
+.carousel-control.right.team{
+    margin-right: 12vw;
+}
+
+.carousel-control.left.team{
+    color: black;
+}
+
 .carousel-control.left {
     left: 0;
+    margin-left: -3vw;
     background-repeat: repeat;
     background-image: none;
 }
@@ -689,15 +707,81 @@ footer.mainfooter {
     height: auto;
 }
 .sidenav.sponsor {
+    justify-content: center;
     height: 100%;
     position: absolute;
     z-index: 1;
     top: 35vh;
     left: 0;
-    width: 22vh;
+    width: 20%;
+    overflow-wrap: normal;
     overflow-y: hidden;
     background-color: white;
     transform: translateX(0);
+    background: none;
+}
+.sidenav.sponsor h2{
+    font-size: medium;
+}
+.sidenav.sponsor img{
+    padding-left: 25px;
+    width: 55%;
+    height: 65%;
+}
+.container-fluid.about{
+    width: 85%;
+    margin-left: 13vw;
+    padding-top: 10px;
+    /* padding-bottom: 70%; */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+@media screen and (max-height: 400px){
+    .sidenav.sponsor{
+        display: flexbox;
+        transform: translate(100vh);
+        flex-direction: row;
+        flex-shrink: 1;
+    }
+    .container-fluid.about{
+        width: 75%;
+        margin-left: 25vw;
+        padding-top: 10px;
+        /* padding-bottom: 70%; */
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    header#main-header a.wbar-item.w-button.w-wide{
+        font-size: small;
+    }
+
+    header#main-header img {
+        block-size: 75px;
+        display: block;
+        margin: 25px;
+    }
+    
+    header#main-header a {
+        color: transparent;
+    }
+    header#main-header {
+        width: auto;
+        height: 75px;
+        display: flex;
+        position: relative;
+        align-self: center;
+        text-align: center;
+        min-inline-size: max-content;
+        color: slategrey;
+        text-transform: capitalize;
+        box-sizing: border-box;
+    }
+    .container{
+        margin-block-end: ;
+    }
 }
 /* Twitter feed conatiner */
 .twitter-container{
