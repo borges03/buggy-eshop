@@ -18,6 +18,7 @@ body {
 header#main-header img {
     block-size: 150px;
     display: block;
+    padding: 5px;
     margin: 5vh;
 }
 
@@ -239,6 +240,7 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     .panel {
         width: 83%;
         height: auto;
+
     }
     .sidenav button.accordion {
         color: #444;
@@ -349,7 +351,9 @@ input[type=checkbox]:checked~.sidebarIconToggle {
     color: #818181;
     display: block;
 }
-
+.accordion.sponsor .panel{
+    background: none;
+}
   
   /* When you mouse over the navigation links, change their color */
     .sidenav a:hover {
@@ -358,10 +362,10 @@ input[type=checkbox]:checked~.sidebarIconToggle {
   
   /* Changes font color */
   .sidenav .panel a {
-      color: #111;
+      color: #818181;
   }
   .sidenav .panel a:hover {
-    color: rgb(109, 109, 235)
+    color: rgb(109, 109, 235);
 }
   /* On smaller screens (less than 450px) change the style of the sidebar */
   @media screen and (max-height: 450px) {
@@ -538,7 +542,8 @@ font-weight: bolder;
 
 .image {
     padding: 100px 0;
-    height: 85vh;
+    height: auto;
+    max-width: 100%;
     margin-left: 15vw;
     width: fit-content;
     background-position: center;
@@ -561,6 +566,7 @@ font-weight: bolder;
     transform: translate(20vw, -50vh);
     z-index: 0;
     width: 60%;
+    position: absolute;
     padding: 20px;
     text-align: center;
     filter: blur(0);
@@ -590,10 +596,14 @@ p#footer {
     float: inline-end;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .text {
-        transform: translate(35%, -180%);
-        width: auto;
+        transform: translate(35vw, -37vh);
+        width: 75%;
+        height: 25%;
+        border: none;
+        padding: 1%;
+
     }
     .w-button {
         width: 100%;
@@ -605,8 +615,13 @@ p#footer {
         top: -60px;
     }
     .image {
-        width: 160%;
         padding: 50px 0px;
+        height: 45vh;
+    }
+    .container.social-post{
+        display: block;
+        text-align: center;
+
     }
 }
 
@@ -666,7 +681,7 @@ footer.mainfooter {
 /* Slideshow on about page */
 
 #myCarousel {
-    padding: 5% 0;
+    padding: 5vh 5vw;
 }
 .carousel-caption{
     position: absolute;
@@ -686,9 +701,15 @@ footer.mainfooter {
     background-repeat: repeat;
     background-image: none;
 }
+.carousel-control.right.about{
+    margin-right: 5vw;
+}
+.carousel-control.left.about{
+    margin-left: 1.5vw;
+}
 
 .carousel-control.right.team{
-    margin-right: 12vw;
+    margin-right: 5vw;
 }
 
 .carousel-control.left.team{
@@ -697,7 +718,7 @@ footer.mainfooter {
 
 .carousel-control.left {
     left: 0;
-    margin-left: -3vw;
+    margin-left: 1vw;
     background-repeat: repeat;
     background-image: none;
 }
@@ -713,10 +734,11 @@ footer.mainfooter {
     z-index: 1;
     top: 35vh;
     left: 0;
-    width: 20%;
+    width: 14%;
     overflow-wrap: normal;
-    overflow-y: hidden;
-    background-color: white;
+    overflow-y: scroll;
+    margin: 1%;
+    background-color: none;
     transform: translateX(0);
     background: none;
 }
@@ -727,6 +749,8 @@ footer.mainfooter {
     padding-left: 25px;
     width: 55%;
     height: 65%;
+}.sidenav.sponsor a{
+    width: 22vw;
 }
 .container-fluid.about{
     width: 85%;
@@ -778,6 +802,7 @@ footer.mainfooter {
         box-sizing: border-box;
     }
     
+    
 }
 /* Twitter feed conatiner */
 .twitter-container{
@@ -810,4 +835,67 @@ footer.mainfooter {
 
 .grid-item{
     display: inline-block;
+}
+
+@media screen and (max-height: 640px){ /* Moto G4 & S5*/
+    /* #main-header {
+        text-align: left;
+        width: 350px;
+    }
+    header#main-header {
+        justify-content: space-evenly;
+    }
+    header#main-header a {
+        min-inline-size: fit-content;
+    }
+    header#main-header img {
+        display: none;
+    }
+    header#main-header h1 {
+        padding: 15px 0;
+        width: 300px;
+        align-self: flex-end;
+        font-size: 45px;
+        font-variant: all-small-caps;
+    }
+    .text {
+        transform: translate(35vw, -38vh);
+        width: 85%;
+        height: 25%;
+        position: relative;
+
+    }
+    .w-button {
+        width: 100%;
+        background-color: #333;
+        padding: 2% 0;
+        z-index: 99;
+    }
+    div.w-right {
+        top: -60px;
+    }
+    .image {
+        padding: 50px 0px;
+    } */
+}
+@media screen and (max-height: 731px){ /* Pixel 2*/
+
+}
+@media screen and (max-height: 823px){ /* Pixel 2 XL*/
+    
+}
+@media screen and (max-height: 568px){ /* iPhone 5/SE */
+
+}
+@media screen and (max-height: 667px){ /* iPhone 6/7/8 */
+
+}
+@media screen and (max-height: 736px){ /* iPhone 6/7/8 Plus */
+
+}
+@media screen and (max-height: 812px){ /* iPhone X */
+
+}
+@media screen and (max-height: 653px){ /* Galaxy Fold */
+
 }
